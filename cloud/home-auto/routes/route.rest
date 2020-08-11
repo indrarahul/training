@@ -1,0 +1,18 @@
+GET http://localhost:3000/v1/on
+
+###
+
+GET http://localhost:3000/v1/off
+
+###
+
+POST http://localhost:3000/v1/
+Content-Type: application/json
+
+{
+    "name" : "Fan",
+    "status": false
+}
+
+###
+GET http://localhost:3000/subscribers/5f32f912a31fe028aeb338c4
