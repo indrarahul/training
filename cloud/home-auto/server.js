@@ -14,4 +14,4 @@ const applianceRouter = require('./routes/appliances')
 app.use('/v1', applianceRouter)
 
 
-app.listen(3000, () => console.log("server started at 3000"))
+app.listen(80, () => console.log("server started at 80"))

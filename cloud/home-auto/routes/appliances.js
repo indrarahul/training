@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const Appliance = require("../models/appliance");
 
+router.get("/", getAppliance, async (req,res)=> {
+    res.send(res.appliance)
+})
+
 router.get("/on", getAppliance, async (req, res) => {
     if(req.body.name != null) {
         res.appliance.name= req.body.name
@@ -46,7 +50,7 @@ router.post("/", async (req,res) => {
 async function getAppliance(req, res, next) {
     let appliance
   try {
-      appliance = await Appliance.findById("5f3300651d94a136c7167f06")
+      appliance = await Appliance.findById("5f3302bf130e952851bc0a96")
       if (appliance == null ){
           return res.status(400).json({message : 'Can\'t find the appliance'})
       }
