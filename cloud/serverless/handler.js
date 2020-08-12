@@ -1,5 +1,5 @@
 const rp = require('request-promise');
-const TELEGRAM_TOKEN = '994345313:AAEJNJjBddtkx5v3t-KRc5WJJLCqIcV9aO0';
+const TELEGRAM_TOKEN = '';
 
 async function switchOn() {
   const status = {
